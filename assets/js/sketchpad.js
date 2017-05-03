@@ -1,4 +1,3 @@
-
 function map(obj, func){
   return Object.getOwnPropertyNames(obj).map(key => func(key, obj[key]))
 }

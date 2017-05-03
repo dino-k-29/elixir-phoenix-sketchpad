@@ -1,38 +1,36 @@
-<div class="row">
-  <div class="btn-group">
-    <button class="btn btn-primary">username</button>
-    <button id="clear-button" type="button" class="btn btn-default">clear</button>
-    <button id="export-button" type="button" class="btn btn-default">export png</button>
+<section class="section">
+  <div class="level">
+    <div class="level-left">
+      <%# <a class="button is-info nav-item">username</a> %>
+      <p class="control">
+        <a id="clear-button" type="button" class="button nav-item">clear</a>
+      </p>
+      <p class="control">
+        <a id="export-button" type="button" class="button is-primary nav-item">export png</a>
+      </p>
+    </div>
   </div>
-</div>
+  <div class="columns">
+    <div id="sketchpad" class="column is-half card"></div>
 
-<div class="row">
-  <div id="sketchpad" class="col-sm-9">
-  </div>
 
-  <div class="col-sm-3">
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Sketchpad Chat</h3>
-      </div>
-      <div id="messages" class="panel-body">
-      </div>
-      <div class="panel-footer">
-        <input id="message-input"
-               class="form-control"
-               type="text"
-               placeholder="Send..."/>
-      </div>
+    <div class="column card">
+      <div class="message-area">
+        <h3 class="title is-3">Sketchpad Chat</h3>
+        <div id="messages"></div>
+        <div>
+          <input id="message-input"
+                 class="form-control input"
+                 type="text"
+                 placeholder="Send a message..."/>
+        </div>
+      </div>  
     </div>
 
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Users</h3>
-      </div>
-      <div id="users" class="panel-body">
-      </div>
+    <div class="column card">
+      <h3 class="title is-3">Users</h3>
+      <div id="users"></div>
     </div>
-
   </div>
-</div>
+</section>
+
