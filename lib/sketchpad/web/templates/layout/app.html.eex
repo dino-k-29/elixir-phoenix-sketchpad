@@ -15,17 +15,15 @@
   </head>
 
   <body>
-    <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-    <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-    
+ 
     <%= render @view_module, @view_template, assigns %>
     
-
     <script>
       window.userToken = "<%= assigns[:user_token] %>"
       window.userId = "<%= assigns[:id] %>"
     </script>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
+    </script>
   </body>
 </html>

@@ -20,7 +20,6 @@ defmodule Sketchpad.Web.PageController do
       |> assign(:user_token, Phoenix.Token.sign(conn, "user token", id))
     else
       conn
-      |> put_flash(:error, "Please signin")
       |> render("signin.html")
       |> halt()
     end

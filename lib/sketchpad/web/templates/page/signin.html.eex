@@ -1,4 +1,13 @@
-<%= form_for @conn, page_path(@conn, :signin), [as: :user], fn f -> %>
-	<%= text_input f, :username, placeholder: "username..." %>
-	<%= submit f, value: "Sketch!" %>
-<% end %>
+<section class="section">
+	<div class="container">
+		<div class="card">
+			<h1 class="card-title">Enter a username to sketch!</h1>
+			<div class="card-content">
+				<%= form_for @conn, page_path(@conn, :signin), [as: :user], fn f -> %>
+					<%= text_input f, :username, class: "input", placeholder: "username..." %>
+					<%= submit f, class: "button is-primary", value: "Sketch!" %>
+				<% end %>		
+			</div>
+		</div>
+	</div>
+</section>
